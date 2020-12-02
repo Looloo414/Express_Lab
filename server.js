@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 // Define a "root" route directly on app
 app.get('/', function (req, res) {
   res.redirect('/home')
-  res.send('<h1>Alexas Goals</h1>');
+  res.send('<h1>Alexa</h1>');
 });
 
 app.get('/home', function (req, res) {
