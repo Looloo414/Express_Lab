@@ -9,8 +9,6 @@ const app = express()   //create express app
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, 'views'));
 
-// Mount middleware (app.use)
-
 
 // Mount routes
 app.get('/', function (req, res) {
