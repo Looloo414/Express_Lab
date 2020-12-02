@@ -1,7 +1,7 @@
 
 const express = require('express')
 const path = require('path')
-const todoDb = require('./data/todo-db');
+const goalDb = require('./data/goal-db');
 
 const app = express()   //create express app
 
@@ -14,22 +14,22 @@ app.set('views', path.join(__dirname, 'views'));
 	
 // Mount routes
 app.get('/', function(req, res) {
-    res.redirect('/todos')
+    res.redirect('/goals')
 })
 
 // Define a "root" route directly on app
 app.get('/', function (req, res) {
     // res.redirect('/home')
-    res.send('<h1>Hello Express!</h1>');
+    res.send('<h1>Alexas Goals</h1>');
   });
 
   app.get('/home', function (req, res){
     res.render('home')
 })
 
-app.get('/todos', function(req, res) {
-    res.render('todos/index', {
-      todos: todoDb.getAll()
+app.get('/goals', function(req, res) {
+    res.render('goals/index', {
+      goals: goalDb.getAll()
     });
   });
   
